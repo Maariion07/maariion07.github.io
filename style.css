@@ -60,6 +60,48 @@ section {
   margin-left: 0;
   text-align: left;
 }
+
+/*Page parcours/diplome */
+#parcours h3 {
+  font-weight: bold;       /* Gras */
+  text-decoration: underline; /* Souligné */
+}
+
+#parcours ul {
+  list-style-type: none; /* Supprime les puces par défaut */
+  padding-left: 0; /* Supprime le retrait par défaut */
+}
+
+#parcours ul li {
+  position: relative;
+  padding-left: 20px; /* Espace entre l'étoile et le texte */
+}
+
+#parcours ul li::before {
+  content: '★'; /* Étoile */
+  position: absolute;
+  left: 0; /* Positionne l'étoile à gauche de chaque ligne */
+  font-size: 20px; /* Taille de l'étoile */
+  color: gold; /* Couleur de l'étoile */
+}
+
+/*Page Parcours/CV*/
+.cv-img {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin-left: 0;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour l'animation */
+}
+.cv-img:hover {
+  transform: scale(1.05); /* Légère augmentation de taille */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+}
+
+
 footer {
   padding: 20px;
   background: #333;
