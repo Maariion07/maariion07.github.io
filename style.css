@@ -6,7 +6,7 @@ body {
   font-family: Arial, sans-serif;
 }
 header {
-  background-color: #333;
+  background-color: #7fd7f1;
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,12 +20,14 @@ header h1 {
   margin: 10px 0;
   font-size: 1.5em;
 }
+
+/*Barre de navigation */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: #333;
+  background-color: #7fd7f1;
 }
 nav ul li {
   position: relative;
@@ -50,6 +52,13 @@ nav ul ul {
 nav ul ul li a {
   padding: 10px;
 }
+
+main h1 {
+  text-align: center;
+  text-decoration: underline; /* Souligné */
+}
+
+/* Page Accueil */
 section {
   padding: 100px 20px;
   margin-top: 120px;
@@ -99,6 +108,42 @@ section {
 .cv-img:hover {
   transform: scale(1.05); /* Légère augmentation de taille */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+}
+
+/*Page Projets avec tableau de compétences */
+.table-competences {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.table-competences th,
+.table-competences td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.table-competences th {
+  background-color: #007bff;
+  color: white;
+}
+
+.table-competences tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-competences td:first-child {
+  font-weight: bold;
+  text-align: left;
+}
+.ligne-titre td {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 10px;
 }
 
 
