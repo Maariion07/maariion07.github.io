@@ -4,7 +4,9 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  padding-top: 120px; /* place pour le header fixe */
 }
+/* Partie HEADER */
 header {
   background-color: #7fd7f1;
   position: fixed;
@@ -14,13 +16,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;  /* Ajuste cette valeur pour éviter la superposition */
+  height: 80px;
 }
-header h1 {
-  color: white;
-  margin: 10px 0;
-  font-size: 1.5em;
-}
-
 /*Barre de navigation */
 nav ul {
   list-style: none;
@@ -61,16 +59,24 @@ main h1 {
 /* Page Accueil */
 section {
   padding: 100px 20px;
-  margin-top: 120px;
+  margin-top: 100px;
   min-height: 100vh;
+  scroll-margin-top: 80px; /* hauteur du header + petite marge */
 }
 .content-box {
   max-width: 50%;
   margin-left: 0;
   text-align: left;
 }
+/* Page Profil */
+#profil {
+  padding: 40px 20px;
+  margin-top: 120px; /* pour compenser le header */
+  min-height: auto;  /* override les 100vh de la règle générale */
+}
 
-/*Page parcours/diplome */
+
+/* Page parcours/diplome/emploi */
 #parcours h3 {
   font-weight: bold;       /* Gras */
   text-decoration: underline; /* Souligné */
@@ -100,7 +106,7 @@ section {
   height: auto;
   display: block;
   margin-left: 0;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour l'animation */
@@ -152,4 +158,42 @@ footer {
   background: #333;
   color: white;
   text-align: center;
+}
+
+/* Animation du titre du portfolio */
+header h1 {
+  color: white;
+  margin: 10px 0;
+  font-size: 2.5em;  /* Agrandir légèrement le titre */
+  text-align: center;
+  font-weight: bold;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;  /* Curseur de typewriter */
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  max-width: 0;
+}
+
+/* Animation effet d’écriture */
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+/* Clignotement du curseur */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
