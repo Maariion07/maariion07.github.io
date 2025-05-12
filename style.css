@@ -58,10 +58,9 @@ main h1 {
 
 /* Page Accueil */
 section {
-  padding: 100px 20px;
-  margin-top: 100px;
+  padding: 60px 20px;
   min-height: 100vh;
-  scroll-margin-top: 80px; /* hauteur du header + petite marge */
+  scroll-margin-top: 100px; /* Ajuste à la hauteur réelle du header */
 }
 .content-box {
   max-width: 50%;
@@ -71,10 +70,8 @@ section {
 /* Page Profil */
 #profil {
   padding: 40px 20px;
-  margin-top: 120px; /* pour compenser le header */
   min-height: auto;  /* override les 100vh de la règle générale */
 }
-
 
 /* Page parcours/diplome/emploi */
 #parcours h3 {
@@ -116,6 +113,12 @@ section {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
 }
 
+/* Page compétences/projets */
+#projetscompétences {
+  padding: 40px 20px;
+  min-height: auto;  /* override les 100vh de la règle générale */
+}
+
 /*Page Projets avec tableau de compétences */
 .table-competences {
   width: 100%;
@@ -151,8 +154,52 @@ section {
   font-size: 1.1em;
   padding: 10px;
 }
+.img-pdf {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+}
 
 
+/*Fenetre Popup du tableau de compétences */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px black;
+  position: relative;
+}
+
+.popup-content button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.popup iframe {
+  width: 80vw;  /* 80% de la largeur de la fenêtre */
+  height: 90vh; /* 90% de la hauteur de la fenêtre */
+  border: none;
+  background-color: white;
+}
+
+
+/* Partie Footer */
 footer {
   padding: 20px;
   background: #333;
