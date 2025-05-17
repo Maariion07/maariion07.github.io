@@ -113,6 +113,75 @@ section {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
 }
 
+/* Page carrousels */
+.skills-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  margin: 40px auto;
+}
+
+.skills-carousel-wrapper {
+  width: 240px; /* largeur d'une skill */
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.skill {
+  flex: 0 0 100px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.skill img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%; /* rend les images rondes */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill p {
+  margin-top: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.skills-carousel-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: #333;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.skills-carousel-container .prev {
+  left: 5px;
+}
+
+.skills-carousel-container .next {
+  right: 5px;
+}
+
+
 /* Page compétences/projets */
 #projetscompétences {
   padding: 40px 20px;
@@ -196,6 +265,54 @@ section {
   height: 90vh; /* 90% de la hauteur de la fenêtre */
   border: none;
   background-color: white;
+}
+
+/* Page Veille Technologique */
+/* Centrage */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 300px;
+  padding: 40px;
+  background-color: #f0f0f0;
+}
+
+/* Style de la card */
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet survol */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton "Voir plus" */
+.voir-plus {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px auto 0 auto;
+  display: block;
+}
+
+.voir-plus:hover {
+  background-color: #0056b3;
 }
 
 
