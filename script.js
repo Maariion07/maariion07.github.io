@@ -19,33 +19,32 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 
 
-  document.querySelectorAll('.skills-carousel-container').forEach(container => {
-    const carousel = container.querySelector('.skills-carousel');
-    const items = carousel.querySelectorAll('.skill');
-    const prevBtn = container.querySelector('.prev');
-    const nextBtn = container.querySelector('.next');
-    let index = 0;
+  const carousels = document.querySelectorAll('.carousel-container');
 
-    function updateCarousel() {
-      const offset = -index * 260; // doit correspondre à la largeur .skill
-      carousel.style.transform = `translateX(${offset}px)`;
-    }
+carousels.forEach(container => {
+  const track = container.querySelector('.carousel-track');
+  const items = track.querySelectorAll('.carousel-item');
+  const prev = container.querySelector('.prev');
+  const next = container.querySelector('.next');
+  let index = 0;
 
-    prevBtn.addEventListener('click', () => {
-      index = Math.max(index - 1, 0); // bloque au début
-      updateCarousel();
-    });
+  function updatePosition() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-    nextBtn.addEventListener('click', () => {
-      index = Math.min(index + 1, items.length - 1); // bloque à la fin
-      updateCarousel();
-    });
-
-    // (optionnel) auto-slide :
-   setInterval(() => {
-   index = (index + 1) % items.length;
-   updateCarousel();
-   }, 3000);
-
-    updateCarousel(); // init
+  prev.addEventListener('click', () => {
+    index = (index - 1 + items.length) % items.length;
+    updatePosition();
   });
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % items.length;
+    updatePosition();
+  });
+
+  // Auto-slide facultatif :
+  setInterval(() => {
+    index = (index + 1) % items.length;
+    updatePosition();
+  }, 4000);
+});

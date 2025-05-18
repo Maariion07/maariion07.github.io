@@ -61,6 +61,8 @@ section {
   padding: 60px 20px;
   min-height: 100vh;
   scroll-margin-top: 100px; /* Ajuste à la hauteur réelle du header */
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .content-box {
   max-width: 50%;
@@ -113,78 +115,87 @@ section {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
 }
 
-/* Page carrousels */
-.skills-carousel-container {
+.carousel-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.carousel-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   overflow: hidden;
-  height: 300px;
-  margin: 40px auto;
+  max-width: 600px;
+  margin: auto;
 }
 
-.skills-carousel-wrapper {
-  width: 240px; /* largeur d'une skill */
-  overflow: hidden;
-  position: relative;
-}
-
-.skills-carousel {
+.carousel-track {
   display: flex;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
-.skill {
-  flex: 0 0 100px;
-  scroll-snap-align: center;
+.carousel-item {
+  flex: 0 0 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-.skill img {
-  width: 260px;
-  height: 260px;
+.carousel-item img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 50%; /* rend les images rondes */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
 }
 
-.skill p {
-  margin-top: 12px;
+.carousel-item p {
+  font-size: 1.2em;
   font-weight: bold;
-  text-align: center;
-  font-size: 1.1em;
+  color: #333;
 }
 
-.skills-carousel-container button {
+.carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
-  background: #333;
-  color: white;
+  background: none;
+  color: #007bff;
   border: none;
-  font-size: 24px;
-  padding: 10px;
+  font-size: 2rem;
   cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+  transition: color 0.3s;
 }
 
-.skills-carousel-container .prev {
-  left: 5px;
+.carousel-btn:hover {
+  color: #0056b3;
 }
 
-.skills-carousel-container .next {
-  right: 5px;
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+.carousel-section {
+  padding: 20px 0; /* réduit l'espacement vertical */
+  margin-bottom: 20px; /* espace après chaque carrousel */
+}
+
+.carousel-section h2 {
+  margin-top: 10px;   /* réduit l’espace au-dessus du titre */
+  margin-bottom: 10px; /* réduit l’espace sous le titre */
 }
 
 
 /* Page compétences/projets */
 #projetscompétences {
-  padding: 40px 20px;
+  padding: 20px 20px;
   min-height: auto;  /* override les 100vh de la règle générale */
 }
 
@@ -266,6 +277,35 @@ section {
   border: none;
   background-color: white;
 }
+.img-miniature {
+  width: 80px;
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: black;
+  user-select: none;
+  transform: translateY(-50%);
+  padding: 0 15px;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  color: #666;
+}
+
 
 /* Page Veille Technologique */
 /* Centrage */

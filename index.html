@@ -6,6 +6,31 @@
   <h1 class="portfolio-title"><span class="typewriter"></span></h1>
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  let captures = [];
+  let indexCapture = 0;
+
+  function ouvrirPopupCaptures(images) {
+    captures = images;
+    indexCapture = 0;
+    document.getElementById("captureImage").src = captures[indexCapture];
+    document.getElementById("popupCaptures").style.display = "flex";
+  }
+
+  function fermerPopupCaptures() {
+    document.getElementById("popupCaptures").style.display = "none";
+  }
+
+  function changerImage(direction) {
+    if (captures.length === 0) return;
+    indexCapture += direction;
+    if (indexCapture < 0) indexCapture = captures.length - 1;
+    if (indexCapture >= captures.length) indexCapture = 0;
+    document.getElementById("captureImage").src = captures[indexCapture];
+  }
+</script>
+
+
 <body>
   <header>
     <h1><span class="typewriter">PortFolio Marion - BTS SIO option SLAM</span></h1>
@@ -85,48 +110,103 @@
         </section>
 
         <section id="competences">
-          <div class="dev">
-            <h2>Langages / Frameworks</h2>
-            <section class="skills-carousel-container">
-              <button class="prev">‹</button>
-              <div class="skills-carousel-wrapper">
-                <div class="skills-carousel">
-                  <div class="skill"><img src="images/html.JPG" alt="HTML"><p>HTML</p></div>
-                  <div class="skill"><img src="images/css.JPG" alt="CSS"><p>CSS</p></div>
-                  <div class="skill"><img src="images/js.JPG" alt="JavaScript"><p>JavaScript</p></div>
-                  <div class="skill"><img src="images/phpv2.JPG" alt="PHP"><p>PHP</p></div>
-                  <div class="skill"><img src="images/pyhon.JPG" alt="Python"><p>Python</p></div>
-                  <div class="skill"><img src="images/java.JPG" alt="Java"><p>Java</p></div>
-                  <div class="skill"><img src="images/c++.JPG" alt="C++"><p>C++</p></div>
-                  <div class="skill"><img src="images/sql.JPG" alt="SQL"><p>SQL</p></div>
-                  <div class="skill"><img src="images/angular.JPG" alt="Angular"><p>Angular</p></div>
-                  <div class="skill"><img src="images/scala.JPG" alt="Scala"><p>Scala</p></div>
+          <section class="carousel-section">
+            <h2>Mes compétences développement </h2>
+            <div class="carousel-container">
+              <button class="carousel-btn prev">‹</button>
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <img src="images/html.JPG" alt="HTML">
+                  <p>HTML</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/css.JPG" alt="CSS">
+                  <p>CSS</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/js.JPG" alt="JavaScript">
+                  <p>JavaScript</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/phpv2.JPG" alt="PHP">
+                  <p>PHP</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/python.JPG" alt="Python">
+                  <p>Python</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/c++.JPG" alt="c++">
+                  <p>C++</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/sql.JPG" alt="sql">
+                  <p>SQL</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/scala.JPG" alt="scala">
+                  <p>Scala</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/angular.JPG" alt="angular">
+                  <p>Angular</p>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/java.JPG" alt="Java">
+                  <p>Java</p>
                 </div>
               </div>
-              <button class="next">›</button>
-            </section>
-          </div>
+              <button class="carousel-btn next">›</button>
+            </div>
+          </section>
 
-          <div class="dev">
-            <h2>Langages / Frameworks</h2>
-            <section class="skills-carousel-container">
-              <button class="prev">‹</button>
-              <div class="skills-carousel-wrapper">
-                <div class="skills-carousel">
-                  <div class="skill"><img src="images/mysql.JPG" alt="MySql"><p>MySQL</p></div>
-                    <div class="skill"><img src="images/vsstudio.JPG" alt="Visual Studio"><p>Visual Studio</p></div>
-                    <div class="skill"><img src="images/eclipse.JPG" alt="Eclipse"><p>Eclipse</p></div>
-                    <div class="skill"><img src="images/thonny.JPG" alt="Thonny"><p>Thonny</p></div>
-                    <div class="skill"><img src="images/looping.JPG" alt="Looping"><p>Looping</p></div>
-                    <div class="skill"><img src="images/github.JPG" alt="GitHub"><p>GitHub</p></div>
-                    <div class="skill"><img src="images/modelio.JPG" alt="Modelio"><p>Modelio</p></div>
-                    <div class="skill"><img src="images/rad.JPG" alt="RAD"><p>RAD</p></div>
-                    <div class="skill"><img src="images/laragon.JPG" alt="Laragon"><p>Laragon</p></div>
+
+          <section id="competences">
+            <section class="carousel-section">
+              <h2>Mes outils / logiciels </h2>
+              <div class="carousel-container">
+                <button class="carousel-btn prev">‹</button>
+                <div class="carousel-track">
+                  <div class="carousel-item">
+                    <img src="images/mysql.JPG" alt="mysql">
+                    <p>My SQL</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/vsstudio.JPG" alt="vsstudio">
+                    <p>Visual Studio </p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/eclipse.JPG" alt="eclipse">
+                    <p>Eclipse</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/thonny.JPG" alt="thonny">
+                    <p>Thonny</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/looping.JPG" alt="looping">
+                    <p>Looping</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/github.JPG" alt="github">
+                    <p>GitHub</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/modelio.JPG" alt="modelio">
+                    <p>Modelio</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/rad.JPG" alt="rad">
+                    <p>RAD studio</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/laragon.JPG" alt="laragon">
+                    <p>Laragon</p>
+                  </div>
                 </div>
+                <button class="carousel-btn next">›</button>
               </div>
-              <button class="next">›</button>
             </section>
-          </div>
         </section>
 
         <section id="projets">
@@ -251,22 +331,37 @@
                 <tr>
                   <td>Refonte Page d'envoi de message global (temporaV3)</td>
                   <td>Décembre 2024</td>
-                  <td>✅</td>
-                  <td>❌</td>
-                  <td>✅</td>
-                  <td>✅</td>
-                  <td>❌</td>
-                  <td>✅</td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <img src="images/enveloppe.JPG" alt="Voir captures" style="width: 60px; height: auto;" class="img-miniature"
+                         onclick="ouvrirPopupCaptures(['images/capture_sans_filtre.jpg', 'images/capture_avec_filtre.jpg'])">
+                  </td>
+                  <td>
+                    <img src="images/pdf.JPG" alt="PDF" class="img-pdf" onclick="openPDFPopup('images/Tempora3.pdf')">
+                  </td>
+                  <td>
+                    <img src="images/enveloppe.JPG" alt="Voir captures" style="width: 60px; height: auto;" class="img-miniature"
+                         onclick="ouvrirPopupCaptures(['images/capture_sans_filtre.jpg', 'images/capture_avec_filtre.jpg'])">
+                  </td>
                 </tr>
                 <tr>
                   <td>Création Page Historique des opérations (tempora v4)</td>
                   <td>Mars/Avril 2025</td>
-                  <td>✅</td>
-                  <td>❌</td>
-                  <td>✅</td>
-                  <td>✅</td>
-                  <td>❌</td>
-                  <td>✅</td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <img src="images/historique.JPG" alt="Voir captures" style="width: 60px; height: auto;" class="img-miniature"
+                         onclick="ouvrirPopupCaptures(['images/basev4.jpg', 'images/ebauche1v4.jpg', 'images/ebauche2v4.jpg', 'images/versiondefv4.jpg', 'images/versiondefv41.jpg'])">
+                  </td>
+                  <td>
+                    <img src="images/pdf.JPG" alt="PDF" class="img-pdf" onclick="openPDFPopup('images/Tempora4.pdf')">
+                  </td>
+                  <td>
+                    <img src="images/historique.JPG" alt="Voir captures" style="width: 60px; height: auto;" class="img-miniature"
+                         onclick="ouvrirPopupCaptures(['images/basev4.jpg', 'images/ebauche1v4.jpg', 'images/ebauche2v4.jpg', 'images/versiondefv4.jpg', 'images/versiondefv41.jpg'])">
+                  </td>
+                  <td></td>
                 </tr>
                 <!-- 3e Ligne de séparation -->
                 <tr class="ligne-titre">
@@ -292,6 +387,15 @@
                 </tr>
               </tbody>
             </table>
+            <div class="popup" id="popupCaptures">
+              <div class="popup-content">
+                <button onclick="fermerPopupCaptures()">Fermer</button>
+                <a class="prev" onclick="changerImage(-1)">&#10094;</a>
+                <img id="captureImage" src="" style="max-width: 100%; max-height: 80vh; display: block; margin: 0 auto;">
+                <a class="next" onclick="changerImage(1)">&#10095;</a>
+              </div>
+            </div>
+
           </div>
         </section>
       </section>
