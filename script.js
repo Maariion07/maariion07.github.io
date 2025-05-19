@@ -48,3 +48,17 @@ carousels.forEach(container => {
     updatePosition();
   }, 4000);
 });
+
+
+  document.querySelector('.hero-button').addEventListener('click', function (e) {
+    e.preventDefault(); // Empêche le scroll automatique
+
+    const header = document.getElementById('main-header');
+    header.style.display = 'flex';
+
+    // Ajoute un padding-top au body pour laisser de la place au header
+    document.body.style.paddingTop = '120px';
+
+    // Défile vers la section #accueil
+    document.getElementById('accueil').scrollIntoView({ behavior: 'smooth' });
+  });
