@@ -74,7 +74,7 @@
               <h3>Bienvenue sur mon portfolio</h3>
               <p>
                 Actuellement en reconversion professionnelle, j’ai choisi de quitter le domaine de la petite enfance et de me lancer dans l’informatique.<br><br>
-                Ce Portfolio vous présentera mon parcours, ainsi que les projets conduits pour devenir développeuse informatique, dans le contexte de mon BTS Services Informatiques aux Organisations (SIO) – option B Solutions Logiciels et Applications Métiers (SLAM).<br><br>
+                Ce Portfolio vous présentera mon parcours, ainsi que les projets que j'ai réalisés tout au long de ma formation dans le cadre du BTS Services Informatiques aux Organisations (SIO) – option B Solutions Logiciels et Applications Métiers (SLAM).<br><br>
                 A la fin de ma formation au greta, je souhaiterai poursuivre mes études par titre professionnel niveau bac+3 – CDA : Concepteur Développeur d’Applications au sein de l’ENI à QUIMPER
               </p>
             </div>
@@ -86,24 +86,24 @@
 
           <section id="parcours">
             <h2>🎓 Mon Parcours</h2>
-            <div class="diplome">
-              <h3> Diplômes </h3>
-              <img src="images/frise2.JPG">
-              <ul style="line-height: 2;">
-                <li><strong><u>2013:</u> BAC Sciences et technologies de la Gestion</strong> (STG) - option Comptabilité et Finance des Entreprises (CFE)</li>
-                <li><strong><u>2015:</u> BTS Comptabilité et Gestion des Organisations</strong> (CGO)</li>
-                <li><strong><u>2016:</u> DCG 2e année</strong> Diplôme de Comptabilité et de Gestion</li>
-                <li><strong><u>2017:</u> Licence pro Métier de la Gestion et de la Comptabilité</strong> (MGC)</li>
-                <li><strong><u>2021:</u> Agrément Assistante Maternelle</strong></li>
-                <li><strong><u>2024 à aujourd'hui:</u> BTS Services Informatiques aux Organisations</strong> (SIO) - option B Solutions Logicielles et Applications Métiers (SLAM)</li>
-              </ul>
+            <div class="frise-container">
+              <div class="frise-line"></div>
+
+              <div class="step stg" data-desc="Bac Sciences et Technologies de la Gestion - Lycée Charles de Foucauld BREST">Bac STG</div>
+              <div class="step cgo" data-desc="BTS Comptabilité et Gestion des Organisations - Lycée Le Likes QUIMPER">BTS CGO</div>
+              <div class="step dcg" data-desc="Diplôme de Comptabilité et Gestion - 2e année - Lycée Sup Javouhey BREST">DCG 2ᵉ année</div>
+              <div class="step mgc" data-desc="Licence Pro Métiers de la Gestion Comptable - IUT BREST">Licence Pro MGC</div>
+              <div class="step am" data-desc="Obtention de l'agrément pour être assistante maternelle - CD 29">Agrément Assistante maternelle</div>
+               <div class="step sio" data-desc="BTS Services Informatiques aux Organisations - GRETA QUIMPER">BTS SIO</div>
             </div>
+
             <div class="emploi" style="margin-top: 40px;">
               <h3> Emplois Précédents</h3>
               <ul style="line-height: 2;">
                 <li><strong><u>2017:</u> Assistante comptable</strong> - Cabinet KPMG - Lorient (4 mois)</li>
                 <li><strong><u>2018-2019:</u> Assistante comptable</strong> - Cabinet Comptacom - Ploermel (19 mois)</li>
-                <li><strong><u>2019-2020:</u> Assistante comptable</strong> - Cabinet Sofico - Brest (16 mois)</li>
+                <li><strong><u>2019:</u> Assistante comptable</strong> - Cabinet Sofico - Brest (16 mois)</li>
+                <li><strong><u>2020:</u> Micro entreprise</strong> - Création article tissus destiné à la puériculture</li>
                 <li><strong><u>2021-2023:</u> Assistante Maternelle</strong> (24 mois)</li>
               </ul>
             </div>
@@ -296,11 +296,13 @@
                   <td></td>
                   <td></td>
                   <td>
+                    <img src="images/pdf.JPG" alt="PDF" class="img-pdf" onclick="openPDFPopup('images/AllergoMenu.pdf')">
+                  </td>
+                  <td>
                     <a href="https://github.com/projetBTSSIO/AllergoMenu" target="_blank">
                       <img src="images/github.JPG" alt="linkedin" style="width: 60px; height: auto;">
                     </a>
                 </td>
-                  <td></td>
                   <td></td>
                 </tr>
                 <tr>
@@ -310,11 +312,13 @@
                   <td></td>
                   <td></td>
                   <td>
+                    <img src="images/pdf.JPG" alt="PDF" class="img-pdf" onclick="openPDFPopup('images/AllergoMenuWeb.pdf')">
+                  </td>
+                  <td>
                     <a href="https://github.com/projetBTSSIO/AllergoMenuWeb" target="_blank">
                       <img src="images/github.JPG" alt="linkedin" style="width: 60px; height: auto;">
                     </a>
-                  </td>
-                  <td></td>
+                </td>
                   <td></td>
                 </tr>
                 <tr>
@@ -415,7 +419,10 @@
             scientifiques et techniques.
           </p>
           <h2>Mon sujet de veille technologique</h2>
-          <p> Le thème que j'ai choisi pour ma veille technologique est : <strong>"L'évolution des drones avec l'intégration de l'IA"</strong></p>
+          <p> Le thème que j'ai choisi pour ma veille technologique est : <strong>"L'évolution des drones dans le domaine militaire et medical avec l'intégration de l'IA"</strong></p>
+          <br>
+          <p> Pour rester au courant des différentes avancées dans le domaine, j'ai mis des alertes en place avec "Google Alertes"</p>
+          <img src="images/alerte.JPG" alt="alertes" style="display: block; margin: auto;">
           <div class="card-container">
               <!-- Carte 1 -->
               <div class="card">
@@ -458,16 +465,6 @@
 
               <!-- Carte 5 -->
               <div class="card">
-                <img src="https://api.microlink.io/?url=https://drone2i.com/lintelligence-artificielle-et-les-drones-dans-lindustrie/&screenshot=true&embed=screenshot.url" alt="Aperçu Drone2i" style="width:100%; border-radius: 8px;">
-                <h3 style="margin-top: 15px;">IA et Drones dans l’Industrie</h3>
-                <p>L’IA transforme les usages des drones industriels, en automatisant les inspections, la maintenance et la sécurité.</p>
-                <a href="https://drone2i.com/lintelligence-artificielle-et-les-drones-dans-lindustrie/" target="_blank" rel="noopener noreferrer">
-                  <button class="voir-plus">Voir plus</button>
-                </a>
-              </div>
-
-              <!-- Carte 6 -->
-              <div class="card">
                 <img src="https://api.microlink.io/?url=https://www.ifri.org/fr/briefings/essaims-et-combat-collaboratif-la-saturation-lere-de-lintelligence-artificielle/&screenshot=true&embed=screenshot.url" alt="Aperçu IFRI" style="width:100%; border-radius: 8px;">
                 <h3 style="margin-top: 15px;">Essaims & Combat Collaboratif</h3>
                 <p>L’IFRI analyse le concept de saturation et de combat collaboratif à l’ère de l’IA, notamment avec les drones en essaim.</p>
@@ -476,7 +473,7 @@
                 </a>
               </div>
 
-              <!-- Carte 7 -->
+              <!-- Carte 6 -->
               <div class="card">
                 <img src="https://api.microlink.io/?url=https://www.objetconnecte.com/des-drones-en-mission-autonome-une-technologie-qui-redefinit-le-futur-militaire-et-logistique/&screenshot=true&embed=screenshot.url" alt="Aperçu Objet Connecté" style="width:100%; border-radius: 8px;">
                 <h3 style="margin-top: 15px;">Drones Autonomes : Missions du Futur</h3>
@@ -485,7 +482,7 @@
                   <button class="voir-plus">Voir plus</button>
                 </a>
               </div>
-              <!-- Carte 8 -->
+              <!-- Carte 7 -->
               <div class="card">
                 <img src="https://api.microlink.io/?url=https://sciencepost.fr/silencieux-furtifs-et-mortels-ces-drones-sous-marins-qui-preparent-la-guerre-de-demain/&screenshot=true&embed=screenshot.url" alt="Aperçu SciencePost" style="width:100%; border-radius: 8px;">
                 <h3 style="margin-top: 15px;">Drones Sous-Marins de Guerre</h3>
@@ -494,11 +491,21 @@
                   <button class="voir-plus">Voir plus</button>
                 </a>
               </div>
+              <!-- carte 8 -->
               <div class="card">
                 <img src="https://api.microlink.io/?url=https://lenergeek.com/2025/05/14/ils-volent-pour-sauver-des-vies-premier-vol-pour-ces-drones-medicaux/&screenshot=true&embed=screenshot.url" alt="Aperçu l'Energeek" style="width:100%; border-radius: 8px;">
                 <h3 style="margin-top: 15px;">Ils volent pour sauver des vies : premier vol pour ces drones médicaux</h3>
                 <p>Découvrez comment la première ligne de drones médicaux en France transforme le transport urgent de prélèvements avec un gain de temps incroyable.</p>
                 <a href="https://lenergeek.com/2025/05/14/ils-volent-pour-sauver-des-vies-premier-vol-pour-ces-drones-medicaux/" target="_blank" rel="noopener noreferrer">
+                  <button class="voir-plus">Voir plus</button>
+                </a>
+              </div>
+              <!-- Carte 9 -->
+               <div class="card">
+                <img src="https://api.microlink.io/?url=https://www.opex360.com/2025/05/19/la-marine-nationale-teste-concept-munition-teleoperee-defensive-pour-protection-de-ses-navires/&screenshot=true&embed=screenshot.url" alt="Aperçu l'Energeek" style="width:100%; border-radius: 8px;">
+                <h3 style="margin-top: 15px;">La Marine nationale teste le concept de munition téléopérée défensive pour la protection de ses navires</h3>
+                <p>Dans un récent entretien publié par Marine & Océans, le commandant de l’équipage A de la frégate multimissions [FREMM] Provence, le capitaine de vaisseau Pascal Forissier [...]</p>
+                <a href="https://www.opex360.com/2025/05/19/la-marine-nationale-teste-concept-munition-teleoperee-defensive-pour-protection-de-ses-navires/" target="_blank" rel="noopener noreferrer">
                   <button class="voir-plus">Voir plus</button>
                 </a>
               </div>
